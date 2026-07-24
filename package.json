@@ -22,7 +22,9 @@
     "dist:linux": "electron-builder --linux --x64 --publish never",
     "verify:release-artifact-names": "node scripts/verify-updater-artifact-names.js dist",
     "lint": "eslint .",
-    "verify": "npm run lint && npm test"
+    "verify": "npm run lint && npm test",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "build": {
     "appId": "com.javis.tokenmonitor",
@@ -148,7 +150,8 @@
     "electron": "43.2.0",
     "electron-builder": "26.15.3",
     "eslint": "^10.7.0",
-    "globals": "^17.7.0"
+    "globals": "^17.7.0",
+    "wrangler": "^4.114.0"
   },
   "engines": {
     "node": ">=22.13.0"
